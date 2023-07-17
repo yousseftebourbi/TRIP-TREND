@@ -1,0 +1,111 @@
+
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+
+.main-btn:hover {
+  color: var(--yellow-color);
+}
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mt-50{
+margin-top:50px;
+}
+
+nav {
+  margin-left: auto;
+
+}
+.bg-nav {
+  margin-bottom: 0;
+      height: 80px;
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+.bg-video video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+}
+nav a {
+  margin-right: 25px;
+}
+.project {
+ background-color: var(--dark-color);
+}
+
+.landing {
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 50px);
+  background: url('static/css/video.mp4') center center/cover no-repeat;
+}
+
+.landing video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+.container-sm {
+    width: 100px;
+}
+.input-width {
+    width: 50%;
+}
+
+
+
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.features .icon-holder .icon {
+  color: var(--green-color);
+}
+.features .feat h4 {
+  color: var(--yellow-color);
+}
+.container {
+  max-width: 50%;
+}
+
+.bg-light {
+  padding: 2.5rem;
+}

@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+ <html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+
+        <title>Trip Trend</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+.landing {
+    position: relative;
+}
+.dashboard-container{
+background-color: rgba(0,0,0,0.7);
+width: 1300px;
+height: 780px;
+margin: 0 auto;
+padding: 10px;
+position : relative;
+top : 50px;
+}
+.dashboard {
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    postion: relative;
+
+
+
+}
+.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+</style>
+
+<body>
+
+<div class="bg-nav bg-dark d-flex flex-column flex-md-row align-items-center p-3 px-md-4 border-bottom shadow-sm sticky-top m-0">
+    <img src="static/css/plane.png" alt="Logo" width="50" height="50">
+    <h5 class="my-0 mr-md-auto mr-3 font-weight-bold" style="position:relative; font-style: oblique; left:25px;font-size: 33px; color:white;">TRIP TREND</h5>
+    <nav class="my-2 my-md-0 mr-md-3 ml-auto">
+        <a class="p2 mx-3 mr-5 " href="home" style="font-weight: bold; font-size: 120%; color:white;">
+            <i class="fas fa-home"></i> Home
+  </a>
+        <a class="p2 mx-3 mr-5 " href="#" style="font-weight: bold;font-size: 120%; color:white;">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+  </a>
+        <a class="p2 mx-3 mr-5 " href="/predict" style="font-weight: bold;font-size: 120%; color:white;">
+            <i class="fas fa-chart-line"></i> Prediction
+  </a>
+        <a class="p2 mx-3 mr-5 " href="/predict2" style="font-weight: bold;font-size: 120%; color:white;">
+            <i class="fas fa-chart-line"></i> Prediction2
+  </a>
+        <a class="p2 mx-3 mr-5 " href="/aboutus" style="font-weight: bold;font-size: 120%; color:white;">
+            <i class="fas fa-info-circle"></i> About us
+  </a>
+    </nav>
+    <a class="btn btn-primary btn-lg"style="background-color: black; color: white;border-color: black;" href="/logout">Log Out</a>
+</div>
+
+<div class="landing">
+    <div class="video-container" >
+        <video autoplay muted loop>
+            <source src="static/css/dashboard.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container mt-5 text-center text-light mx auto" style="background-color: rgba(0, 0, 0, 0.7); postion: relative;width:1000px; height: 900px;padding: 25px;padding-left: 5px;padding-right: 5px;">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+        <br>
+      <h2 class="font-weight-bold" style="font-style: oblique;"> Explore and Analyze Travel Trends with Our Dashboard </h2><hr>
+        <br>
+        <p style="font-size: 18px;">Our Dashboard provides a clear and interactive visualization of travel trends. With a rich visual presentation and data, you can explore and analyze key information related to tourism. </p>
+
+<p class="positioned",style="font-size: 18px;">This dashboard allows you to track key indicators such as popular destinations, booking rates, peak travel times, and much more. This will enable you to make informed decisions based on concrete data to enhance your travel planning.</p>
+
+        <p class="positioned",style="font-size: 18px;">Navigate through the different tabs and interactive graphs to discover detailed information about destinations, recommended itineraries, special offers, and more. Use filters and customization options to tailor the dashboard to your specific needs.</p>
+
+        <p class="positioned",style="font-size: 18px;">Our Trip Trend Dashboard offers a comprehensive experience to explore and optimize your travel offerings based on the latest trends and up-to-date data.</p>
+
+<p class="positioned",style="font-size: 18px;">Get ready to discover a new way of visualizing and analyzing travel trends with our Trip Trend Dashboard!</p><br><br>
+      <a href="#dashboard-container" class="btn btn-primary">Try our Dashboard</a><hr><br>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+
+    <div class="dashboard-container" id="dashboard-container" style="margin-bottom: 100px;">
+        <iframe class="dashboard" title="DASHBOARD PI FINAL" src="https://app.powerbi.com/reportEmbed?reportId=2174686d-7fc7-46bf-92c7-6e11980d031a&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730" frameborder="0" style="resize: none;"></iframe>
+    </div>
+</div>
+
+</body>
+
+ </html>
